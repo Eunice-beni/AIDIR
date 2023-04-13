@@ -52,6 +52,7 @@
             <div>
             <p>Jours de dialyse:</p>
             <select name="jour_de_dialyse" id="" required>
+            <option value="Lundi">Lundi</option>
                 <option value="Lundi">Lundi</option>
                 <option value="Mardi">Mardi</option>
                 <option value="Mercredi">Mercredi</option>
@@ -123,7 +124,7 @@
         
         <div>
         <p>Prénom:</p>
-            <input type="text" name="prenom" id="prénom" placeholder="prénom" required pattern="[A-Za-z]+" title="Le champ nom ne doit contenir que des lettres">
+            <input type="text" name="prenom" id="prénom" placeholder="prénom" required pattern="[A-Za-z\s]+" title="Le champ nom ne doit contenir que des lettres">
         </div>
 
      
@@ -131,16 +132,12 @@
         
       
         
-        <!-- <div>
-            <d>Sexe:</d>
-            <input type="text" name="sexe" id="sexe" placeholder="sexe">
-        </div> -->
-      <!-- <div class="sous-bloc3"> -->
+       
        
         
      <div>
      <p>Nationnalité:</p>
-            <input type="text" name="nationalite" id="nationalité" placeholder="nationalité" required pattern="[A-Za-z]+" title="Le champ nom ne doit contenir que des lettres">
+            <input type="text" name="nationalite" id="nationalité" placeholder="nationalité" required title="Le champ nom ne doit contenir que des lettres">
         </div>
         
 
@@ -171,8 +168,8 @@
          
       
         
-        <div>
-            <label for="region" required> Region:</label>
+        <div class="region">
+            <label for="region" required><p> Region:</p></label>
         <input name="region" type="radio" value="01">District d’ABIDJAN</input>
         <input name="region" type="radio" value="02">District de YAMOUSSOUKRO</input>
         <input name="region" type="radio" value="03">GBEKE</input>
@@ -183,6 +180,7 @@
         <input name="region" type="radio" value="08">INDENIE DJUABLIN</input>
         <input name="region" type="radio" value="09">BAS SASSANDRA</input>
         <input name="region" type="radio" value="10">GBOKLÊ</input>
+        <div>
 
         <select class="selectmenu" name="centre" id="01" >
             <option value="A">Cocody</option>
@@ -200,15 +198,15 @@
         </div>
         <!-- <div class="sous-bloc5"> -->
         
-        <label for="">Nom de la personne à contacter en cas d’urgence (et le lien):</label><br>
+        <label for=""><h4> Nom de la personne à contacter en cas d’urgence (et le lien):</h4></label><br>
         
         <div>
             <p>Personne à contacter:</p>
-            <input type="text" name="personne_a_contacter" id="personne_à_contacter" placeholder="personne à contacter" required pattern="[A-Za-z]+" title="Le champ nom ne doit contenir que des lettres">
+            <input type="text" name="personne_a_contacter" id="personne_à_contacter" placeholder="personne à contacter"  required pattern="[A-Za-z\s]+" title="Le champ nom ne doit contenir que des lettres">
         </div>
         <div>
             <p>Le lien:</p>
-            <input type="text" name="le-lien" id="le-lien" required pattern="[A-Za-z]+" title="Le champ nom ne doit contenir que des lettres">
+            <input type="text" name="le_lien" id="le-lien" required pattern="[A-Za-z\s]+" title="Le champ nom ne doit contenir que des lettres">
         </div>
 
         
