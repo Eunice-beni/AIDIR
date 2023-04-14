@@ -38,12 +38,12 @@ if(isset($_GET["id"]) && !empty(trim($_GET["id"]))){
                 
           // Récupérer la valeur d'un champ individuel
                 $name = $row["matricule"];
+                $image = $row['image'];
                 $choix = $row["choix"];
                   $lieu_de_examen = $row["lieu_de_examen"];
                   $genre = $row["genre"];
                   $nom = $row["nom"];
                   $prenom = $row["prenom"];
-                  $sexe = $row["sexe"];
                   $date_de_naissance = $row["date_de_naissance"];
                   $nationalite = $row["nationalite"];
                   $residence = $row["residence"];
@@ -55,6 +55,7 @@ if(isset($_GET["id"]) && !empty(trim($_GET["id"]))){
                   $centre_de_dialyse = $row["centre_de_dialyse"];
                   $jour_de_dialyse = $row["jour_de_dialyse"];
                   $personne_a_contacter = $row["personne_a_contacter"];
+                  $profession_ = $row["le_lien"];
                   $profession_ = $row["profession_"];
                   $contact_ = $row["contact_"];
                   $a_une_carte_de_dialyse = $row["a_une_carte_de_dialyse"];
@@ -107,6 +108,10 @@ if(isset($_GET["id"]) && !empty(trim($_GET["id"]))){
                         <p><b><?php echo $row["matricule"]; ?></b></p>
                     </div>
                     <div class="form-group">
+                        <label>PHOTO</label>
+                        <p><b style='width: 100px;'><img style="width: 100px; border-radius: 60px" src="images/<?php echo $row['image']; ?>" alt=""></b></p>
+                    </div>
+                    <div class="form-group">
                         <label>CHOIX</label>
                         <p><b><?php echo $row["choix"]; ?></b></p>
                     </div>
@@ -124,9 +129,7 @@ if(isset($_GET["id"]) && !empty(trim($_GET["id"]))){
                         <label>PRENOM</label>
                         <p><b><?php echo $row["prenom"]; ?></b></p>
                     </div> <div class="form-group">
-                        <label>SEXE</label>
-                        <p><b><?php echo $row["sexe"]; ?></b></p>
-                    </div> <div class="form-group">
+                  
                         <label>DATE DE NAISSANCE</label>
                         <p><b><?php echo $row["date_de_naissance"]; ?></b></p>
                     </div> <div class="form-group">
@@ -162,6 +165,10 @@ if(isset($_GET["id"]) && !empty(trim($_GET["id"]))){
                         <label>PERSONNE A CONTACTER</label>
                         <p><b><?php echo $row["personne_a_contacter"]; ?></b></p>
                     </div> 
+                     <div class="form-group">
+                        <label>LIEN</label>
+                        <p><b><?php echo $row["le_lien"]; ?></b></p>
+                    </div>
                      <div class="form-group">
                         <label>PROFESSION</label>
                         <p><b><?php echo $row["profession_"]; ?></b></p>
